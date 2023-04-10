@@ -1,0 +1,56 @@
+<html>
+
+<title>Kidney Disease Predictor </title>
+<body style='background-color:#CAC7C5'>
+<div class="Values input">
+<center>
+<h1>Enter the values for Chronic Kidney Disease prediction </h1>
+
+ <pr align="center">1. For RBC and Pus cell enter 0 in case of abnormal and 1 in case of normal.<br>
+ 2. For Pus cell count and Bacteria enter 0 in case of not present and 1 in case of present.<br>
+ 3. For Hypertension,Diabetes mellitus,Coronary artery disease,Peda Edema,Anemia enter 0 in case of no and 1 in case yes.<br>
+ 4. For Appetite enter 0 in case of good and 1 in case of Poor.</pr>
+<form  action="{{url_for("predict")}}" method="post">
+<br>
+<br>
+
+<input align="center" type="text" name="age" placeholder="Age" required="required"/><br>
+<input align="center" type="text" name="blood_pressure" placeholder="Blood Pressure" required="required"/><br>
+<input align="center" type="text" name="specific_gravity" placeholder="Specific Gravity" required="required"/><br>
+<input align="center" type="text" name="albumin" placeholder="Albumin" required="required"/><br>
+<input align="center" type="text" name="sugar" placeholder="Sugar" required="required"/><br>
+<input align="center" type="text" name="red_blood_cells" placeholder="Red Blood Cells" required="required"/><br>
+<input align="center" type="text" name="pus_cell" placeholder="Pus Cell" required="required"/><br>
+<input align="center" type="text" name="pus_cell_clumps" placeholder="Pus Cell Clumps" required="required"/><br>
+<input align="center" type="text" name="bacteria" placeholder="Bacteria" required="required"/><br>
+<input align="center" type="text" name="blood_glucose_random" placeholder="Blood Glucose Random" required="required"/><br>
+<input align="center" type="text" name="blood_urea" placeholder="Blood Urea" required="required"/><br>
+<input align="center" type="text" name="serum_creatinine" placeholder="Serum Creatinine" required="required"/><br>
+<input align="center" type="text" name="sodium" placeholder="Sodium" required="required"/><br>
+<input align="center" type="text" name="potassium" placeholder="Potassium" required="required"/><br>
+<input align="center" type="text" name="haemoglobin" placeholder="Haemoglobin" required="required"/><br>
+<input align="center" type="text" name="packed_cell_volume" placeholder="Packed cell Volume" required="required"/><br>
+<input align="center" type="text" name="white_blood_cell_count" placeholder="White Blood Cell Count" required="required"/><br>
+<input align="center" type="text" name="red_blood_cell_count" placeholder="Red Blood Cell Count" required="required"/><br>
+<input align="center" type="text" name="hypertension" placeholder="HyperTension" required="required"/><br>
+<input align="center" type="text" name="diabetes_mellitus" placeholder="Diabetes Mellitus" required="required"/><br>
+<input align="center" type="text" name="coronary_artery_disease" placeholder="Coronary Artery Disease" required="required"/><br>
+<input align="center" type="text" name="appetite" placeholder="Appetite" required="required"/><br>
+<input align="center" type="text" name="peda_edema" placeholder="Peda Edema" required="required"/><br>
+<input align="center" type="text" name="anemia" placeholder="Anemia" required="required"/><br>
+
+<br>
+<button style='background-color:#76749E' type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+</form>
+</center>
+<div>
+ <center>
+  <h2>{{prediction_val}}</h2>
+ </center>
+</div>
+</div>
+</body>
+</html>
+
+
+
